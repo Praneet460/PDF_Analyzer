@@ -12,6 +12,6 @@ This application helps you in converting your scanned files into the text files 
 
 ## How the application looks like?
 <img src = "https://user-images.githubusercontent.com/23660137/60700470-a8679100-9f15-11e9-9552-0af321b4c984.PNG">
-<img src - "https://user-images.githubusercontent.com/23660137/60700473-a8679100-9f15-11e9-9d93-e7b15aaab201.PNG">
+<img src = "https://user-images.githubusercontent.com/23660137/60700473-a8679100-9f15-11e9-9d93-e7b15aaab201.PNG">
 
 
