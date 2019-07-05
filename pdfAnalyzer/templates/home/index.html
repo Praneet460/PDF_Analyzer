@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block mainbody %}
+  
+<div class="container text-white text-center" style="padding-top: 15px; padding-bottom: 15px">
+    <h1 class="cover-heading">Scanned PDF Data Extraction and Analysis</h1>
+    <p class="lead" style="padding-top: 20px">
+        This module will be similar to the NLP based email reader with the
+        exception that instead of an email being the input, the input in this case will be a scanned PDF and text will be extracted from it using OCR.
+    </p>
+</div>
+
+<div class="bs-example col-md-6 mx-auto">
+    <ul class="nav nav-tabs justify-content-center">
+        <li class="nav-item">
+            <a href="#file" class="nav-link active font-weight-bold" style="color: gray" data-toggle="tab">PDF File</a>
+        </li>
+        <li class="nav-item">
+            <a href="#link" class="nav-link font-weight-bold" style="color: gray" data-toggle="tab">PDF Link</a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+
+        <div class="tab-pane fade show active" id="file">
+            <h4 class="mt-3 cover-heading text-center text-white">Upload Your File</h4>
+            
+            <!-- Upload form -->
+            <form class="form-inline mt-4 mx-auto" method=post action="/" enctype="multipart/form-data">
+
+                <div class="form-group mx-auto">
+                    <input type="file" class="text-white font-weight-bold" id="exampleInputFile" name="inputFile">
+                    
+                </div>
+
+                <div class="form-check text-white">
+                    <input type="checkbox" class="form-check-input" name="tabular_data_pdf" id="tabulardata">
+                    <label for="form-check-input">In case of Tabular Data</label>
+                </div>
+                <button type="submit" class="btn btn-primary font-weight-bold mx-auto">Upload</button>
+                
+            </form>
+
+            {% if filename %}
+                <div class="container mt-3 mb-3 text-center">
+                    <a href="{{ url_for('view_file', filename = filename )}}" target="_blank">
+                    <button class="btn btn-primary font-weight-bold">Converted File</button>
+                    </a>
+                </div>
+            {% endif %}
+
+            <!-- Instructions -->
+            <div class=" row mt-5">
+                <div class="col-md-8 mx-auto">
+                    <div class="card card-body bg-secondary text-white">
+                        <h5 class="text-center">Instructions</h5>
+                        <ul>
+                        <li>Select the file by clicking on the <b>Choose file</b> option.</li>
+                        <li>Make sure you select the file with <b>.pdf</b> extension.</li>
+                        <li>Finally upload your file by clicking on <b>Upload</b> button.</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+
+        <div class="tab-pane fade" id="link">
+            <h4 class="mt-3 cover-heading text-center text-white">Paste File URL</h4>
+            
+            <!-- Paste Form Link -->
+            <form class="form-inline mt-4 col-md-8 mx-auto" method=post action="/">
+
+                <div class="form-group mx-auto">
+                
+                    <input name="pdfUrl" type="text" class="form-control" placeholder="Type your pdf link" required>
+
+                </div>
+                <button type="submit" class="btn btn-primary form-group mx-auto font-weight-bold">Submit</button>
+                
+            </form>
+
+            <!-- Instructions -->
+            <div class=" row mt-5">
+                <div class="col-md-8 mx-auto">
+                    <div class="card card-body bg-secondary text-white">
+                        <h5 class="text-center">Instructions</h5>
+                        <ul>
+                        <li>Paste the PDF file url in the <b>Text Box</b> provided above.</li>
+                        <li>Make sure you paste the link having file with <b>.pdf</b> extension.</li>
+                        <li>Finally submit your file by clicking on <b>Submit</b> button.</li>
+                        </ul>
+    
+                    </div>
+                </div>
+    
+            </div>
+            
+
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock mainbody %}

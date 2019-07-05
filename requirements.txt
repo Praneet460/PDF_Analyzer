@@ -1,0 +1,8 @@
+Flask == 1.0.3
+Pillow == 6.1.0
+pytesseract == 0.2.7
+Wand == 0.5.4
+tqdm == 4.32.2
+requests == 2.22.0
+google-api-python-client==1.7.9
+google-cloud == 0.34.0
