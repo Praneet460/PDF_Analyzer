@@ -9,6 +9,7 @@ except ImportError as ie:
 # built-in modules
 import io
 
+
 # initialize
 client = vision.ImageAnnotatorClient.from_service_account_json("./apiKey/MedUSA-9ea899b19d9e.json")
 
@@ -33,7 +34,7 @@ def google_txt_converter(FILEPATH, file_name, *args, **kwargs):
             page = Image(image = img)
             imgBlobs.append(page.make_blob('jpg'))
 
-        extracted_txt = []
+        # extracted_txt = []
 
         for imgBlob in imgBlobs:
             # im = Img.open(io.BytesIO(imgBlob))
@@ -41,10 +42,13 @@ def google_txt_converter(FILEPATH, file_name, *args, **kwargs):
             image = vision.types.Image(content=imgBlob)
             response = client.document_text_detection(image=image)
             document = response.full_text_annotation.text
-            extracted_txt.append(document)
-
+            # extracted_txt.append(document.split('\n'))
+        
+            # print(extracted_txt)
             with open(f'../txt_files/{file_name}_gva.txt', 'a+', encoding="utf-8") as txtfile:
-                txtfile.write(str(document))
+                txtfile.write(document)
+
+       
 
         print("Task Completed !!")
         

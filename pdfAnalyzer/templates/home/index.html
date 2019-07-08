@@ -5,8 +5,7 @@
 <div class="container text-white text-center" style="padding-top: 15px; padding-bottom: 15px">
     <h1 class="cover-heading">Scanned PDF Data Extraction and Analysis</h1>
     <p class="lead" style="padding-top: 20px">
-        This module will be similar to the NLP based email reader with the
-        exception that instead of an email being the input, the input in this case will be a scanned PDF and text will be extracted from it using OCR.
+        This project will help you in extracting the text from the scanned PDF using the Google Vision OCR and analyze the text based on your needs.
     </p>
 </div>
 
@@ -30,14 +29,15 @@
 
                 <div class="form-group mx-auto">
                     <input type="file" class="text-white font-weight-bold" id="exampleInputFile" name="inputFile">
+                    <button type="submit" class="btn btn-primary font-weight-bold mx-auto">Upload</button>
                     
                 </div>
 
-                <div class="form-check text-white">
+                <!-- <div class="form-check text-white">
                     <input type="checkbox" class="form-check-input" name="tabular_data_pdf" id="tabulardata">
                     <label for="form-check-input">In case of Tabular Data</label>
                 </div>
-                <button type="submit" class="btn btn-primary font-weight-bold mx-auto">Upload</button>
+                <button type="submit" class="btn btn-primary font-weight-bold mx-auto">Upload</button> -->
                 
             </form>
 
@@ -46,7 +46,19 @@
                     <a href="{{ url_for('view_file', filename = filename )}}" target="_blank">
                     <button class="btn btn-primary font-weight-bold">Converted File</button>
                     </a>
+                    <a href="{{ url_for('view_original_file', filename = filename)}}" target="_blank">
+                        <button class="btn btn-primary font-weight-bold">Original File</button>
+                    </a>
                 </div>
+
+                {% if analyze_pdf %}
+                <div class="container mt-3 mb-3 text-center">
+                    <a href="{{ url_for('analyze_pdf_page', filename = analyze_pdf)}}">
+                    <button class="btn btn-primary font-weight-bold">Analyze File</button>
+                    </a>
+                </div>
+                {% endif %}
+
             {% endif %}
 
             <!-- Instructions -->

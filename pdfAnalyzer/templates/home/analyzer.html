@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block mainbody %}
+
+<div class="container text-white text-center" style="padding-top: 15px; padding-bottom: 15px">
+    <h1 class="cover-heading">
+        Analysis Result
+    </h1>
+    <p class="lead" style="padding-top: 20px">The table shows the analyzed result of the upload file.</p>
+</div>
+
+<div class="container text-center">
+    <table class="table table-hover">
+        <thead style="color: gray">
+            <tr>
+                <th>Parameters</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody class="text-white">
+            {% if output_data %}
+               {% for key, value in output_data.items() %}
+                 <tr>
+                     <td>{{key}}</td>
+                     <td>{{value}}</td>
+                 </tr>
+               {% endfor %}
+            {% endif %}
+            <!-- <tr>
+                <td>No. of pages</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Type</td>
+                <td>PDF</td>
+            </tr> -->
+
+        </tbody>
+    </table>
+
+</div>
+
+{% endblock mainbody %}
