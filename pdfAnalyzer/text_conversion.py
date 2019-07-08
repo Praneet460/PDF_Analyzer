@@ -9,7 +9,7 @@ try:
     from wand.image import Image
     from tqdm import tqdm
     from PIL import Image as Img
-    import pytesseract
+  #  import pytesseract
 except ImportError as ie:
     print(f"Make sure that you have installed the required packages : {ie}")
 
@@ -17,7 +17,7 @@ except ImportError as ie:
 import os
 import io
 
-pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'
+# pytesseract.pytesseract.tesseract_cmd = 'C:\\Program Files\\Tesseract-OCR\\tesseract.exe'
 
 # return the images
 def txt_converter(FILEPATH, file_name, *args, **kwargs):

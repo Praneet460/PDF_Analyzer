@@ -1,8 +1,56 @@
-Flask == 1.0.3
-Pillow == 6.1.0
-pytesseract == 0.2.7
-Wand == 0.5.4
-tqdm == 4.32.2
-requests == 2.22.0
-google-api-python-client==1.7.9
-google-cloud == 0.34.0
+aniso8601==7.0.0
+astroid==2.2.5
+cachetools==3.1.1
+camelot-py==0.7.2
+certifi==2019.3.9
+chardet==3.0.4
+Click==7.0
+colorama==0.4.1
+cymem==2.0.2
+Cython==0.29.10
+et-xmlfile==1.0.1
+Flask==1.0.3
+Flask-RESTful==0.3.7
+google-api-core==1.12.0
+google-auth==1.6.3
+google-cloud-vision==0.37.0
+googleapis-common-protos==1.6.0
+grpcio==1.21.1
+idna==2.8
+isort==4.3.20
+itsdangerous==1.1.0
+jdcal==1.4.1
+Jinja2==2.10.1
+lazy-object-proxy==1.4.1
+MarkupSafe==1.1.1
+mccabe==0.6.1
+nltk==3.4.3
+numpy==1.16.4
+opencv-python==4.1.0.25
+openpyxl==2.6.2
+pandas==0.24.2
+pdfminer.six==20181108
+Pillow==6.0.0
+pipenv==2018.11.26
+preshed==2.0.1
+protobuf==3.8.0
+pyasn1==0.4.5
+pyasn1-modules==0.2.5
+pycryptodome==3.8.2
+pylint==2.3.1
+PyPDF2==1.26.0
+pytesseract==0.2.6
+python-dateutil==2.8.0
+pytz==2019.1
+requests==2.22.0
+rsa==4.0
+six==1.12.0
+sortedcontainers==2.1.0
+tqdm==4.32.1
+typed-ast==1.4.0
+urllib3==1.25.3
+virtualenv==16.6.0
+virtualenv-clone==0.5.3
+Wand==0.5.4
+Werkzeug==0.15.4
+wrapt==1.11.1
