@@ -1,4 +1,4 @@
-# third-party modules
+# third-party modules to be imported
 
 try:
     from flask import Flask, render_template, url_for, redirect, request
@@ -6,12 +6,12 @@ try:
     from flask import send_from_directory
 
 except ImportError as ie:
-    print(f"Please install the required packages in the requirements.txt file: {ie}")
+    print(f"Please install the required packages in the requirements.txt file first: {ie}")
 
 # built-in modules
 import os
 
-# our modules
+# custom modules
 from helper import allowed_files
 from text_conversion import txt_converter
 from file_downloader import downloader
@@ -26,7 +26,7 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.secret_key = 'secret key'
 
-# redirect to local-host
+# redirecting to local-host
 @app.route('/', methods = ['POST', 'GET'])
 def home():
     '''
