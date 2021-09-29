@@ -24,7 +24,7 @@ Jinja2==2.10.1
 lazy-object-proxy==1.4.1
 MarkupSafe==1.1.1
 mccabe==0.6.1
-nltk==3.4.3
+nltk==3.6.3
 numpy==1.16.4
 opencv-python==4.1.0.25
 openpyxl==2.6.2
