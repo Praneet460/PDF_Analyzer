@@ -2,7 +2,7 @@ aniso8601==7.0.0
 astroid==2.2.5
 cachetools==3.1.1
 camelot-py==0.7.2
-certifi==2019.3.9
+certifi==2022.12.7
 chardet==3.0.4
 Click==7.0
 colorama==0.4.1
